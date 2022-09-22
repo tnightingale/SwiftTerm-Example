@@ -128,11 +128,17 @@ class ViewController: NSViewController, LocalProcessTerminalViewDelegate, NSUser
         terminal.processDelegate = self
         terminal.feed(text: "Welcome to SwiftTerm")
 
-        let shell = getShell()
-        let shellIdiom = "-" + NSString(string: shell).lastPathComponent
-        
+//        let shell = getShell()
+//        let shellIdiom = "-" + NSString(string: shell).lastPathComponent
+
+//        FileManager.default.changeCurrentDirectoryPath (FileManager.default.homeDirectoryForCurrentUser.path)
+//        terminal.startProcess (executable: shell, execName: shellIdiom)
+
+        let executable = "/usr/bin/top"
+        let shellIdiom = "-" + NSString(string: executable).lastPathComponent
         FileManager.default.changeCurrentDirectoryPath (FileManager.default.homeDirectoryForCurrentUser.path)
-        terminal.startProcess (executable: shell, execName: shellIdiom)
+        terminal.startProcess (executable: executable)
+
         view.addSubview(terminal)
         logging = NSUserDefaultsController.shared.defaults.bool(forKey: "LogHostOutput")
         updateLogging ()
