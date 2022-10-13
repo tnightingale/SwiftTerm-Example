@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>arguments</key>
+	<array>
+		<string>-c</string>
+		<string>/bin/ls /Users/ajh/code/tnightingale/SwiftTerm-Example/TerminalApp/MacTerminal; sleep 10</string>
+	</array>
+	<key>command</key>
+	<string>/usr/bin/bash</string>
+</dict>
+</plist>

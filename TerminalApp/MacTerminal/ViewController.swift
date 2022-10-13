@@ -133,11 +133,20 @@ class ViewController: NSViewController, LocalProcessTerminalViewDelegate, NSUser
 
 //        FileManager.default.changeCurrentDirectoryPath (FileManager.default.homeDirectoryForCurrentUser.path)
 //        terminal.startProcess (executable: shell, execName: shellIdiom)
+        
+        var resourceFileDictionary: NSDictionary?
+        var command = "/usr/bin/sh"
+        var args: [String] = []
+        
+        guard let path = Bundle.main.path(forResource: "Defaults", ofType: "plist") else {return}
+        resourceFileDictionary = NSDictionary(contentsOfFile: path)
+        if let resourceFileDictionaryContent = resourceFileDictionary {
+          command = resourceFileDictionaryContent.object(forKey: "command") as! String
+          args = resourceFileDictionaryContent.object(forKey: "arguments") as! [String]
+       }
 
-        let executable = "/usr/bin/top"
-        let shellIdiom = "-" + NSString(string: executable).lastPathComponent
         FileManager.default.changeCurrentDirectoryPath (FileManager.default.homeDirectoryForCurrentUser.path)
-        terminal.startProcess (executable: executable)
+        terminal.startProcess (executable: command, args: args)
 
         view.addSubview(terminal)
         logging = NSUserDefaultsController.shared.defaults.bool(forKey: "LogHostOutput")

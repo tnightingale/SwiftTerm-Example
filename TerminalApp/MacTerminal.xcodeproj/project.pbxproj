@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3DECF0DD28F891AC002BC9E0 /* Defaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3DECF0DC28F891AC002BC9E0 /* Defaults.plist */; };
 		49C75E442419C7E9008977FE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C75E432419C7E9008977FE /* ViewController.swift */; };
 		49C75E462419C7E9008977FE /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C75E452419C7E9008977FE /* Document.swift */; };
 		49C75E482419C7E9008977FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49C75E472419C7E9008977FE /* Assets.xcassets */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3DECF0DC28F891AC002BC9E0 /* Defaults.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Defaults.plist; sourceTree = "<group>"; };
 		4936D21C24512A98005CEE27 /* SwiftSH.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftSH.framework; path = ../../../../private/tmp/SwiftSH.framework; sourceTree = "<group>"; };
 		4936D22E2451386F005CEE27 /* SwiftSH.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftSH.framework; path = SwiftSH.binaries/SwiftSH.framework; sourceTree = "<group>"; };
 		49C75E3F2419C7E9008977FE /* MacTerminal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MacTerminal.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -81,6 +83,7 @@
 				49C75E472419C7E9008977FE /* Assets.xcassets */,
 				49C75E492419C7E9008977FE /* Main.storyboard */,
 				49C75E4C2419C7E9008977FE /* Info.plist */,
+				3DECF0DC28F891AC002BC9E0 /* Defaults.plist */,
 				49C75E4D2419C7E9008977FE /* MacTerminal.entitlements */,
 				49E855262427A3B400A3C3AB /* DebugViewController.swift */,
 			);
@@ -153,6 +156,7 @@
 			files = (
 				49C75E482419C7E9008977FE /* Assets.xcassets in Resources */,
 				49C75E4B2419C7E9008977FE /* Main.storyboard in Resources */,
+				3DECF0DD28F891AC002BC9E0 /* Defaults.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
